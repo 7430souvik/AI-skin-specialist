@@ -1,6 +1,7 @@
 from pathlib import Path
 
 import gradio as gr
+import os
 
 #from brain_of_the_doctor import brain_of_the_doctor
 from brain_of_the_doctor import brain_of_the_doctor
@@ -599,4 +600,13 @@ with gr.Blocks(title=APP_TITLE) as iface:
 
 
 if __name__ == "__main__":
-    iface.launch(debug=True, css=CSS, theme=gr.themes.Base())
+    port = int(os.environ.get("PORT", "10000"))
+
+    iface.launch(
+        server_name="0.0.0.0",
+        server_port=port,
+        debug=True,
+        css=CSS,
+        theme=gr.themes.Base(),
+        share=False,
+    )
