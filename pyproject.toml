@@ -1,0 +1,18 @@
+[project]
+name = "ai-skin-specialist"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=1.13.0",
+    "deepgram-sdk>=7.12.0",
+    "dotenv>=0.9.9",
+    "gradio>=6.30.0",
+    "groq>=1.7.0",
+    "pillow>=12.3.0",
+    "pyaudio>=0.2.14",
+    "pydub>=0.25.1",
+    "python-dotenv>=1.2.4",
+    "speechrecognition>=3.17.0",
+]
